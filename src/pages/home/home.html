@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title style = "background-color:rgb(78, 197, 48)">
+      Fotos
+    </ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (click) = "getPicture()">
+        <ion-icon name="camera"></ion-icon>
+          </button>
+       </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style = "background-color: #8E522F">
+  <ion-card *ngFor = "let imagen of items">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../assets/imgs/avatar.png">
+        </ion-avatar>
+        <h2>{{user.email}}</h2>
+        <p>{{imagen.time}}</p>
+      </ion-item>
+    
+      <img src = {{imagen.url}}>
+    
+      <ion-card-content>
+        <p>Longitud: {{imagen.longitud}}</p>
+        <p>Latitud: {{imagen.latitud}}</p>
+        <p>Tipo de Arbol: {{imagen.TA}}</p>
+        <p>Ancho del Tronco: {{imagen.AT}}</p>
+        <p>Ancho de la Copa: {{imagen.AC}}</p>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

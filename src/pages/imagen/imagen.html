@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ImagenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>imagen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<img src = {{imagen}}>
+<p>Latitud: {{latitud}}</p>
+<p>Longitud: {{longitud}}</p>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input placeholder="Tipo de Arbol" [(ngModel)]="TA"></ion-input>
+    <ion-input placeholder="Ancho de la copa" [(ngModel)]="AC"></ion-input>
+    <ion-input placeholder="Ancho del tronco" [(ngModel)]="AT"></ion-input>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="subirImagen()">
+        <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
